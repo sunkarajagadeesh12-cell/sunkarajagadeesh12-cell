@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/profile.png" alt="Profile photo of Sai Jagadeesh" width="150" />
+    <img src="./assets/profile.jpg" width="180" alt="Profile photo of Sai Jagadeesh" />
 </p>
 
 <p align="center">
