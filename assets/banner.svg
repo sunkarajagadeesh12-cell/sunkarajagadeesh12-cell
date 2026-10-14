@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="bt bd">
+  <title id="bt">Sai Jagadeesh</title>
+  <desc id="bd">Animated banner with a moving grid, floating particles and a glowing name</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050A1F"/>
+      <stop offset="0.55" stop-color="#0B1B4D"/>
+      <stop offset="1" stop-color="#2A1166"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00E5FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#38BDF8" stroke-opacity="0.13" stroke-width="1"/>
+      <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="40 0" dur="5s" repeatCount="indefinite"/>
+    </pattern>
+    <clipPath id="round"><rect width="1000" height="260" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1000" height="260" fill="url(#bg)"/>
+    <rect width="1000" height="260" fill="url(#grid)"/>
+
+    <rect y="0" width="220" height="260" fill="url(#beam)">
+      <animate attributeName="x" from="-220" to="1000" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <g fill="#00E5FF">
+      <circle cx="90" cy="260" r="2.5"><animate attributeName="cy" from="270" to="-10" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="260" cy="260" r="1.8"><animate attributeName="cy" from="270" to="-10" dur="8s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="430" cy="260" r="2.2"><animate attributeName="cy" from="270" to="-10" dur="7s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" begin="2s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#A78BFA">
+      <circle cx="610" cy="260" r="2.6"><animate attributeName="cy" from="270" to="-10" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="780" cy="260" r="1.9"><animate attributeName="cy" from="270" to="-10" dur="9s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <circle cx="920" cy="260" r="2.3"><animate attributeName="cy" from="270" to="-10" dur="7.5s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7.5s" begin="3s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <text x="500" y="125" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="64" font-weight="700" fill="url(#txt)" filter="url(#glow)" opacity="0">
+      SAI JAGADEESH
+      <animate attributeName="opacity" from="0" to="1" dur="1.4s" fill="freeze"/>
+    </text>
+
+    <text x="500" y="178" text-anchor="middle" font-family="'Courier New', monospace" font-size="22" fill="#C4B5FD" opacity="0">
+      AI &amp; Data Science Student<tspan fill="#00E5FF">_<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan>
+      <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1.2s" fill="freeze"/>
+    </text>
+
+    <rect x="1" y="1" width="998" height="258" rx="18" fill="none" stroke="#38BDF8" stroke-opacity="0.35"/>
+  </g>
+</svg>
